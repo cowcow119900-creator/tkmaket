@@ -101,7 +101,7 @@ export default function Details() {
                 </li>
                 <li className="flex gap-3">
                   <span className="font-bold">•</span>
-                  <p>정식 사업자 등록 여부를 반드시 확인하여 사기 피해를 예방하세요. 티켓거래소는 100% 안전을 보장합니다.</p>
+                  <p>정식 사업자 등록 여부를 반드시 확인하여 사기 피해를 예방하세요. 바로상품권은 100% 안전을 보장합니다.</p>
                 </li>
               </ul>
             </section>

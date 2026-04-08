@@ -14,10 +14,10 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl font-bold mb-6"
           >
-            금융 가이드의 새로운 기준, 티켓거래소
+            금융 가이드의 새로운 기준, 바로상품권
           </motion.h1>
           <p className="text-gray-600 text-lg leading-relaxed">
-            티켓거래소는 디지털 자산의 효율적인 활용을 고민하는 고객님들께 최적의 비교 분석과 가이드를 제공합니다.<br />
+            바로상품권은 디지털 자산의 효율적인 활용을 고민하는 고객님들께 최적의 비교 분석과 가이드를 제공합니다.<br />
             정식 사업자 등록 업체로서 투명한 절차와 정직한 상담을 약속드립니다.
           </p>
         </div>
@@ -84,7 +84,7 @@ export default function About() {
             <div className="p-8 bg-white rounded-3xl border border-gray-100 shadow-sm text-center">
               <Users className="text-primary mx-auto mb-6" size={40} />
               <h3 className="text-xl font-bold mb-4">고객 우선</h3>
-              <p className="text-gray-600 text-sm">고객님의 상황을 깊이 이해하고 최적의 해결책을 제시합니다.</p>
+              <p className="text-gray-600 text-sm">고객님의 상황을 깊이 이해하고<br />최적의 해결책을 제시합니다.</p>
             </div>
             <div className="p-8 bg-white rounded-3xl border border-gray-100 shadow-sm text-center">
               <HeartHandshake className="text-primary mx-auto mb-6" size={40} />

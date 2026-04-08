@@ -49,7 +49,7 @@ export default function Home() {
                 <h1 className="text-5xl md:text-7xl font-black text-white leading-[1.1] mb-8 tracking-tighter drop-shadow-2xl">
                   최적의 혜택비교,<br />
                   전문가와 함께하는<br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-yellow-300">티켓거래소</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-yellow-300">바로상품권</span>
                 </h1>
                 <p className="text-xl text-blue-100/70 mb-12 leading-relaxed font-medium max-w-xl">
                   복잡한 정책 비교부터 안전한 활용 방안까지 전문가가 안내합니다.<br />
@@ -189,7 +189,7 @@ export default function Home() {
                 <span className="text-primary">전문가와 비교</span>하세요
               </h2>
               <p className="text-gray-600 mb-10 text-lg leading-relaxed max-w-xl">
-                티켓거래소는 고객님의 소중한 자산을 가장 가치 있게 활용할 수 있도록 
+                바로상품권은 고객님의 소중한 자산을 가장 가치 있게 활용할 수 있도록 
                 실시간 시세 비교와 정책 분석 서비스를 제공합니다.
               </p>
               
@@ -281,7 +281,7 @@ export default function Home() {
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">왜 티켓거래소인가요?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">왜 바로상품권인가요?</h2>
             <p className="text-blue-100">사기 걱정 없는 정식 등록 업체, 투명한 수수료로 신뢰를 드립니다.</p>
           </div>
 

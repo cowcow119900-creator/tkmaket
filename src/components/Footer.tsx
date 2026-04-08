@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="space-y-6">
             <Logo light />
             <p className="text-sm leading-relaxed opacity-70">
-              티켓거래소는 정식 사업자 등록 업체로서 고객님의 소중한 자산을 안전하고 신속하게 현금화해 드립니다. 365일 24시간 친절 상담을 약속드립니다.
+              바로상품권은 정식 사업자 등록 업체로서 고객님의 소중한 자산을 안전하고 신속하게 현금화해 드립니다. 365일 24시간 친절 상담을 약속드립니다.
             </p>
           </div>
 
