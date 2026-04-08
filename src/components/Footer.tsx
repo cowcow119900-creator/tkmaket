@@ -33,15 +33,20 @@ export default function Footer() {
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <Phone size={18} className="text-primary shrink-0" />
-                <span>대표번호: 1600-0000 (24시간)</span>
+                <span>대표번호: 010-5029-1777 (24시간)</span>
               </li>
               <li className="flex items-start gap-3">
                 <MessageCircle size={18} className="text-primary shrink-0" />
-                <span>카카오톡: ticket_exchange</span>
+                <button 
+                  onClick={() => (window as any).fcWidget?.open()}
+                  className="hover:text-primary transition-colors text-left"
+                >
+                  실시간 채팅 상담 (24시간)
+                </button>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-primary shrink-0" />
-                <span>서울특별시 강남구 테헤란로 123</span>
+                <span>충청남도 천안시 서북구 쌍용대로 121, 3030호</span>
               </li>
             </ul>
           </div>
@@ -50,16 +55,16 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-6">사업자 정보</h4>
             <ul className="space-y-2 text-xs text-gray-500">
-              <li>상호명: 티켓거래소</li>
-              <li>대표자: 홍길동</li>
-              <li>사업자등록번호: 123-45-67890</li>
-              <li>통신판매업신고: 제 2024-서울강남-0000호</li>
+              <li>상호명: 바로상품권</li>
+              <li>대표자: 전윤수외1명</li>
+              <li>사업자등록번호: 125-62-00331</li>
+              <li>주소: 충청남도 천안시 서북구 쌍용대로 121, 3030호</li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-          <p>© 2024 티켓거래소. All rights reserved.</p>
+          <p>© 2024 바로상품권. All rights reserved.</p>
           <div className="flex gap-6">
             <Link to="/privacy" className="hover:text-gray-300">개인정보처리방침</Link>
             <Link to="/terms" className="hover:text-gray-300">이용약관</Link>

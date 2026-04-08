@@ -46,21 +46,21 @@ export default function Services() {
 
   const serviceList = [
     {
-      title: '휴대폰 소액결제',
+      title: '소액결제 활용 상담',
       price: '80~90%',
-      items: ['SKT, KT, LG 전 통신사', '모바일 상품권 매입', '즉시 송금 시스템'],
+      items: ['SKT, KT, LG 정책 분석', '최적의 활용 방안 제안', '실시간 한도 가이드'],
       icon: <Smartphone size={32} />,
     },
     {
-      title: '정보이용료',
+      title: '콘텐츠이용료 최적화',
       price: '60~70%',
-      items: ['구글 플레이스토어', '원스토어 콘텐츠', '게임 아이템 결제'],
+      items: ['구글/원스토어 비교', '플랫폼별 혜택 분석', '맞춤형 이용 설계'],
       icon: <CreditCard size={32} />,
     },
     {
-      title: '상품권 매입',
+      title: '상품권 가치 비교',
       price: '85~92%',
-      items: ['컬쳐랜드 / 해피머니', '도서문화상품권', '구글 기프트카드'],
+      items: ['실시간 시세 모니터링', '업계 최고가 비교 안내', '다양한 상품권 취급'],
       icon: <Ticket size={32} />,
     },
   ];
@@ -69,8 +69,8 @@ export default function Services() {
     <div className="pt-24 pb-24">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h1 className="text-4xl font-bold mb-6">취급 서비스 및 단가 안내</h1>
-          <p className="text-gray-600 text-lg">티켓거래소는 업계 최고 수준의 매입가를 보장하며, 투명하게 운영됩니다.</p>
+          <h1 className="text-4xl font-bold mb-6">서비스 비교 및 맞춤 상담</h1>
+          <p className="text-gray-600 text-lg">실시간 시세 비교와 전문가 분석을 통해 가장 유리한 선택을 도와드립니다.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
@@ -109,27 +109,27 @@ export default function Services() {
         <div className="bg-gray-900 rounded-3xl p-8 md:p-12 text-white">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold mb-6">3분 시스템 프로세스</h2>
+              <h2 className="text-3xl font-bold mb-6">스마트 가이드 프로세스</h2>
               <div className="space-y-8">
                 <div className="flex gap-4">
                   <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center shrink-0 font-bold">1</div>
                   <div>
-                    <h4 className="font-bold mb-1">상담 및 신청 접수</h4>
-                    <p className="text-gray-400 text-sm">24시간 전문 상담원이 즉시 응대합니다.</p>
+                    <h4 className="font-bold mb-1">전문가 맞춤 상담</h4>
+                    <p className="text-gray-400 text-sm">24시간 전문 상담원이 1:1로 상세히 안내합니다.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center shrink-0 font-bold">2</div>
                   <div>
-                    <h4 className="font-bold mb-1">결제 코드 발송 및 확인</h4>
-                    <p className="text-gray-400 text-sm">안전한 결제 링크 또는 핀번호를 확인합니다.</p>
+                    <h4 className="font-bold mb-1">혜택 비교 및 분석</h4>
+                    <p className="text-gray-400 text-sm">고객님께 가장 유리한 방안을 비교 분석해 드립니다.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center shrink-0 font-bold">3</div>
                   <div>
-                    <h4 className="font-bold mb-1">즉시 계좌 송금</h4>
-                    <p className="text-gray-400 text-sm">확인 즉시 3분 이내로 송금이 완료됩니다.</p>
+                    <h4 className="font-bold mb-1">안전한 서비스 이행</h4>
+                    <p className="text-gray-400 text-sm">결정하신 방안에 따라 신속하고 안전하게 처리됩니다.</p>
                   </div>
                 </div>
               </div>

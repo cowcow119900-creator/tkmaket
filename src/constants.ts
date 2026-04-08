@@ -10,18 +10,18 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const SERVICES: ServiceItem[] = [
   {
-    title: '휴대폰 소액결제',
-    description: '통신사 한도 내에서 모바일 상품권을 구매하여 즉시 현금화하는 서비스입니다.',
+    title: '휴대폰 소액결제 상담',
+    description: '통신사 정책 및 한도를 분석하여 고객님께 가장 유리한 활용 방안을 제안해 드립니다.',
     icon: 'Smartphone',
   },
   {
-    title: '정보이용료(콘텐츠이용료)',
-    description: '구글 플레이스토어, 원스토어 등에서 콘텐츠를 결제하여 현금화하는 서비스입니다.',
+    title: '콘텐츠이용료 최적화',
+    description: '구글 플레이, 원스토어 등 다양한 플랫폼의 이용료 활용법을 비교 분석해 드립니다.',
     icon: 'CreditCard',
   },
   {
-    title: '모바일 상품권 매입',
-    description: '컬쳐랜드, 해피머니 등 각종 모바일 상품권을 업계 최고가로 매입합니다.',
+    title: '상품권 가치 비교 매입',
+    description: '컬쳐랜드, 해피머니 등 각종 모바일 상품권의 실시간 시세를 비교하여 안내합니다.',
     icon: 'Ticket',
   },
 ];
@@ -29,43 +29,43 @@ export const SERVICES: ServiceItem[] = [
 export const STEPS: StepItem[] = [
   {
     number: '01',
-    title: '상담 신청',
-    description: '카카오톡이나 전화를 통해 24시간 언제든 상담을 신청하세요.',
+    title: '전문가 맞춤 상담',
+    description: '24시간 대기 중인 전문 상담원과 1:1 상담을 통해 최적의 방안을 찾습니다.',
   },
   {
     number: '02',
-    title: '본인 확인 및 한도 조회',
-    description: '간단한 본인 확인 후 이용 가능한 한도를 즉시 확인해 드립니다.',
+    title: '혜택 비교 및 분석',
+    description: '고객님의 상황에 맞는 다양한 서비스의 수수료와 혜택을 상세히 비교해 드립니다.',
   },
   {
     number: '03',
-    title: '결제 및 입금 완료',
-    description: '결제 완료 후 3분 이내에 고객님의 계좌로 즉시 송금됩니다.',
+    title: '안전한 서비스 이행',
+    description: '결정하신 방안에 따라 투명하고 신속하게 서비스를 완료해 드립니다.',
   },
 ];
 
 export const FAQS: FAQItem[] = [
   {
-    question: '이용 시간은 어떻게 되나요?',
-    answer: '티켓거래소는 365일 24시간 연중무휴로 운영됩니다. 언제든 상담 및 신청이 가능합니다.',
+    question: '상담 시 어떤 내용을 안내받나요?',
+    answer: '현재 이용 가능한 한도, 통신사별 정책, 서비스별 수수료 비교 등 가장 효율적인 자산 활용 방안을 안내해 드립니다.',
   },
   {
-    question: '입금까지 얼마나 걸리나요?',
-    answer: '상담부터 입금까지 평균 3분~5분 이내에 모든 절차가 완료됩니다.',
+    question: '비교 분석 서비스는 무료인가요?',
+    answer: '네, 티켓거래소의 모든 상담 및 비교 분석 서비스는 24시간 무료로 제공됩니다.',
   },
   {
-    question: '수수료는 어느 정도인가요?',
-    answer: '업계 최저 수준의 수수료를 지향하며, 상담 시 투명하게 안내해 드립니다. 숨겨진 추가 비용은 없습니다.',
+    question: '가장 유리한 방법을 어떻게 알 수 있나요?',
+    answer: '상담원에게 문의하시면 실시간 시세와 정책을 바탕으로 고객님께 가장 높은 가치를 드릴 수 있는 방법을 추천해 드립니다.',
   },
   {
-    question: '미납이나 연체가 있어도 이용 가능한가요?',
-    answer: '통신사 정책에 따라 다를 수 있으므로, 정확한 확인을 위해 상담원에게 문의해 주시기 바랍니다.',
+    question: '안전한 거래를 위한 팁이 있나요?',
+    answer: '정식 사업자 등록 여부를 확인하고, 지나치게 높은 혜택을 제시하는 곳은 주의해야 합니다. 티켓거래소는 투명한 가이드를 제공합니다.',
   },
 ];
 
 export const IMAGES = {
-  HERO_BG: 'https://loremflickr.com/1600/900/finance,speed',
+  HERO_BG: 'https://loremflickr.com/1600/900/consultation,business,friendly',
   SERVICE_ICON_1: 'https://loremflickr.com/1600/900/smartphone,payment',
   SERVICE_ICON_2: 'https://loremflickr.com/1600/900/ticket,voucher',
-  TRUST_BADGE: 'https://loremflickr.com/1600/900/shield,security',
+  TRUST_BADGE: 'https://loremflickr.com/1600/900/customer-service,support,consultant',
 };

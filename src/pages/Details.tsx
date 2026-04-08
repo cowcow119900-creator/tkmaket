@@ -12,8 +12,8 @@ export default function Details() {
           className="max-w-4xl mx-auto"
         >
           <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold mb-6">서비스 상세 안내</h1>
-            <p className="text-gray-600 text-lg">소액결제 및 정보이용료 현금화에 대한 모든 것을 안내해 드립니다.</p>
+            <h1 className="text-4xl font-bold mb-6">스마트 자산 활용 가이드</h1>
+            <p className="text-gray-600 text-lg">전문가와 함께하는 안전한 디지털 자산 활용 및 비교 분석 가이드입니다.</p>
           </div>
 
           <div className="space-y-16">
@@ -40,20 +40,20 @@ export default function Details() {
                   </ul>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">이용 절차</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-                  <div className="p-4 border border-gray-100 rounded-xl text-center">
-                    <p className="text-primary font-bold mb-1">STEP 01</p>
-                    <p className="text-sm">상담 및 한도 확인</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                    <div className="p-4 border border-gray-100 rounded-xl text-center">
+                      <p className="text-primary font-bold mb-1">STEP 01</p>
+                      <p className="text-sm">전문가 맞춤 상담</p>
+                    </div>
+                    <div className="p-4 border border-gray-100 rounded-xl text-center">
+                      <p className="text-primary font-bold mb-1">STEP 02</p>
+                      <p className="text-sm">혜택 비교 및 분석</p>
+                    </div>
+                    <div className="p-4 border border-gray-100 rounded-xl text-center">
+                      <p className="text-primary font-bold mb-1">STEP 03</p>
+                      <p className="text-sm">안전한 서비스 완료</p>
+                    </div>
                   </div>
-                  <div className="p-4 border border-gray-100 rounded-xl text-center">
-                    <p className="text-primary font-bold mb-1">STEP 02</p>
-                    <p className="text-sm">상품권 구매 및 전송</p>
-                  </div>
-                  <div className="p-4 border border-gray-100 rounded-xl text-center">
-                    <p className="text-primary font-bold mb-1">STEP 03</p>
-                    <p className="text-sm">즉시 계좌 입금</p>
-                  </div>
-                </div>
               </div>
             </section>
 

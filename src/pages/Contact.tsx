@@ -20,18 +20,21 @@ export default function Contact() {
                 <Phone size={32} />
               </div>
               <h3 className="font-bold text-xl mb-2">대표 전화</h3>
-              <p className="text-2xl font-black text-primary mb-1">1600-0000</p>
+              <p className="text-2xl font-black text-primary mb-1">010-5029-1777</p>
               <p className="text-gray-500 text-sm">365일 24시간 상담 가능</p>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 text-center">
-              <div className="w-16 h-16 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+            <button 
+              onClick={() => (window as any).fcWidget?.open()}
+              className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow"
+            >
+              <div className="w-16 h-16 bg-blue-50 text-primary rounded-2xl flex items-center justify-center mb-6 mx-auto">
                 <MessageCircle size={32} />
               </div>
-              <h3 className="font-bold text-xl mb-2">카카오톡 상담</h3>
-              <p className="text-2xl font-bold text-gray-900 mb-1">ticket_exchange</p>
-              <p className="text-gray-500 text-sm">실시간 1:1 채팅 상담</p>
-            </div>
+              <h3 className="font-bold text-xl mb-2">실시간 채팅 상담</h3>
+              <p className="text-2xl font-bold text-primary mb-1">지금 바로 상담하기</p>
+              <p className="text-gray-500 text-sm">전문가와 1:1 실시간 채팅</p>
+            </button>
 
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 text-center">
               <div className="w-16 h-16 bg-orange-50 text-orange-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">

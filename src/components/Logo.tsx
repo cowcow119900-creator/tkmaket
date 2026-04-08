@@ -12,8 +12,8 @@ export default function Logo({ className, showText = true, light = false }: Logo
 
   return (
     <div className={cn("flex items-center gap-3", className)}>
-      <div className="relative w-10 h-10 shrink-0">
-        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+      <div className={cn("relative shrink-0", showText ? "w-10 h-10" : "w-full h-full")}>
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-2xl">
           {/* Circular Arrows */}
           <path 
             d="M50 10C27.9 10 10 27.9 10 50C10 55.5 12.1 60.5 15.5 64.3L25 55C23.1 53.5 22 51.9 22 50C22 34.5 34.5 22 50 22C55.5 22 60.5 23.6 64.7 26.3L74 17C67.3 12.6 59 10 50 10Z" 

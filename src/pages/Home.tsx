@@ -2,80 +2,146 @@ import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, CheckCircle2, Smartphone, CreditCard, Ticket, ShieldCheck, Zap, Clock, Phone, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Logo from '../components/Logo';
 import { IMAGES, SERVICES, STEPS, FAQS } from '../constants';
 
 export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center pt-32 pb-32 overflow-hidden bg-[#0a192f]">
+        {/* Animated Background Elements */}
         <div className="absolute inset-0 z-0">
-          <img
-            src={IMAGES.HERO_BG}
-            alt="Hero Background"
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
+          <motion.div 
+            animate={{ 
+              scale: [1, 1.2, 1],
+              rotate: [0, 90, 0],
+              x: [0, 50, 0],
+              y: [0, 30, 0]
+            }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-600/20 rounded-full blur-[120px]" 
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-900/40" />
+          <motion.div 
+            animate={{ 
+              scale: [1, 1.3, 1],
+              rotate: [0, -90, 0],
+              x: [0, -40, 0],
+              y: [0, -20, 0]
+            }}
+            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+            className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-indigo-600/20 rounded-full blur-[150px]" 
+          />
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03]" />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <span className="inline-block bg-secondary text-primary-dark font-bold px-4 py-1 rounded-full text-xs mb-6 uppercase tracking-widest">
-                Trusted Digital Platform
-              </span>
-              <h1 className="text-4xl md:text-6xl font-black text-white leading-tight mb-6 tracking-tighter">
-                3분 이내 빠른 송금,<br />
-                <span className="text-secondary">안전하고 투명한</span> 티켓거래소
-              </h1>
-              <p className="text-xl text-blue-50/80 mb-10 leading-relaxed font-medium">
-                복잡한 서류 없이 스마트폰 하나로 3분 만에 해결하세요.<br />
-                정식 등록 업체로 사기 걱정 없는 100% 안전 거래를 보장합니다.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/contact"
-                  className="bg-primary hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 transition-all shadow-lg shadow-blue-900/50"
-                >
-                  지금 바로 무료 상담하기
-                  <ArrowRight size={20} />
-                </Link>
-                <div className="flex items-center gap-4 px-4">
-                  <div className="text-white text-sm">
-                    <p className="font-bold">누적 이용 고객 5만 명+</p>
-                    <p className="opacity-80">실시간 상담 대기 중</p>
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <div className="max-w-3xl lg:w-3/5">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              >
+                <span className="inline-block bg-white/10 backdrop-blur-md border border-white/20 text-secondary font-bold px-4 py-1 rounded-full text-xs mb-6 uppercase tracking-widest shadow-xl">
+                  Trusted Digital Platform
+                </span>
+                <h1 className="text-5xl md:text-7xl font-black text-white leading-[1.1] mb-8 tracking-tighter drop-shadow-2xl">
+                  최적의 혜택비교,<br />
+                  전문가와 함께하는<br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-yellow-300">티켓거래소</span>
+                </h1>
+                <p className="text-xl text-blue-100/70 mb-12 leading-relaxed font-medium max-w-xl">
+                  복잡한 정책 비교부터 안전한 활용 방안까지 전문가가 안내합니다.<br />
+                  정식 등록 업체로서 투명한 수수료와 1:1 맞춤형 가이드로 압도적인 깊이의 신뢰를 드립니다.
+                </p>
+                <div className="flex flex-col sm:flex-row items-center gap-8">
+                  <button
+                    onClick={() => (window as any).fcWidget?.open()}
+                    className="relative group overflow-hidden bg-primary text-white px-10 py-5 rounded-2xl font-bold text-xl flex items-center justify-center gap-2 transition-all shadow-[0_20px_50px_rgba(30,58,138,0.5)] hover:shadow-[0_25px_60px_rgba(30,58,138,0.7)] hover:-translate-y-1 active:translate-y-0 w-full sm:w-auto"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-transparent opacity-0 group-hover:opacity-20 transition-opacity" />
+                    지금 바로 상담하기
+                    <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
+                  </button>
+                  <div className="flex items-center gap-4">
+                    <div className="text-white text-sm">
+                      <p className="font-bold text-lg">누적 이용 고객 5만 명+</p>
+                      <p className="opacity-60">실시간 상담 전문가 대기 중</p>
+                    </div>
                   </div>
                 </div>
+              </motion.div>
+            </div>
+
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.5, rotateY: 45, z: -100 }}
+              animate={{ 
+                opacity: 1, 
+                scale: 1, 
+                rotateY: 0, 
+                z: 0,
+                y: [0, -20, 0] 
+              }}
+              transition={{ 
+                duration: 1.2, 
+                ease: "easeOut",
+                y: {
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }
+              }}
+              className="hidden lg:flex lg:w-2/5 justify-center items-center perspective-2000"
+            >
+              <div className="relative group perspective-1000">
+                <div className="absolute inset-0 bg-blue-500 blur-[150px] opacity-30 animate-pulse group-hover:opacity-60 transition-opacity" />
+                <motion.div 
+                  whileHover={{ rotateY: 20, rotateX: -10, scale: 1.05 }}
+                  className="relative transform-gpu transition-transform duration-700 ease-out"
+                >
+                  <Logo 
+                    showText={false} 
+                    light 
+                    className="w-[420px] h-[420px] drop-shadow-[0_50px_50px_rgba(0,0,0,0.6)] filter brightness-110 contrast-110" 
+                  />
+                  {/* Decorative 3D Ring */}
+                  <div className="absolute inset-0 border-[10px] border-white/5 rounded-full scale-110 -z-10 blur-sm" />
+                  <div className="absolute inset-0 border-[2px] border-white/10 rounded-full scale-125 -z-10 blur-[2px]" />
+                </motion.div>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Trust Badges */}
-      <section className="bg-white py-10 border-b border-gray-100">
+      {/* Trust Badges - Floating Style */}
+      <section className="relative z-20 -mt-16 pb-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="flex items-center justify-center gap-3">
-              <ShieldCheck className="text-primary" size={32} />
-              <span className="font-bold text-gray-700">100% 안전 보장</span>
+          <div className="bg-white/80 backdrop-blur-xl p-8 rounded-[32px] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] border border-white/50 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="flex flex-col items-center justify-center gap-3 text-center">
+              <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-primary shadow-inner">
+                <ShieldCheck size={28} />
+              </div>
+              <span className="font-bold text-gray-800">전문가 맞춤 가이드</span>
             </div>
-            <div className="flex items-center justify-center gap-3">
-              <Zap className="text-secondary" size={32} />
-              <span className="font-bold text-gray-700">3분 이내 송금</span>
+            <div className="flex flex-col items-center justify-center gap-3 text-center">
+              <div className="w-12 h-12 bg-yellow-50 rounded-2xl flex items-center justify-center text-secondary shadow-inner">
+                <Zap size={28} />
+              </div>
+              <span className="font-bold text-gray-800">실시간 혜택 비교</span>
             </div>
-            <div className="flex items-center justify-center gap-3">
-              <Clock className="text-primary" size={32} />
-              <span className="font-bold text-gray-700">24시간 연중무휴</span>
+            <div className="flex flex-col items-center justify-center gap-3 text-center">
+              <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-primary shadow-inner">
+                <Clock size={28} />
+              </div>
+              <span className="font-bold text-gray-800">24시간 무료 상담</span>
             </div>
-            <div className="flex items-center justify-center gap-3">
-              <CheckCircle2 className="text-green-500" size={32} />
-              <span className="font-bold text-gray-700">정식 등록 업체</span>
+            <div className="flex flex-col items-center justify-center gap-3 text-center">
+              <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-500 shadow-inner">
+                <CheckCircle2 size={28} />
+              </div>
+              <span className="font-bold text-gray-800">정식 등록 업체</span>
             </div>
           </div>
         </div>
@@ -89,21 +155,21 @@ export default function Home() {
             <p className="text-gray-600">복잡한 과정 없이 단 3단계면 충분합니다.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {STEPS.map((step, idx) => (
               <motion.div
                 key={idx}
-                whileHover={{ y: -10 }}
-                className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative overflow-hidden"
+                whileHover={{ y: -15, scale: 1.02 }}
+                className="bg-white p-10 rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-gray-100 relative overflow-hidden group"
               >
-                <div className="text-6xl font-black text-blue-50 absolute -top-2 -right-2">
+                <div className="text-8xl font-black text-blue-50/50 absolute -top-4 -right-4 transition-transform group-hover:scale-110">
                   {step.number}
                 </div>
-                <div className="w-12 h-12 bg-blue-50 text-primary rounded-xl flex items-center justify-center mb-6 relative z-10">
-                  {idx === 0 ? <Phone size={24} /> : idx === 1 ? <Smartphone size={24} /> : <Zap size={24} />}
+                <div className="w-16 h-16 bg-blue-50 text-primary rounded-2xl flex items-center justify-center mb-8 relative z-10 shadow-inner">
+                  {idx === 0 ? <Phone size={32} /> : idx === 1 ? <Smartphone size={32} /> : <Zap size={32} />}
                 </div>
-                <h3 className="text-xl font-bold mb-4 relative z-10">{step.title}</h3>
-                <p className="text-gray-600 leading-relaxed relative z-10">{step.description}</p>
+                <h3 className="text-2xl font-bold mb-4 relative z-10 text-gray-900">{step.title}</h3>
+                <p className="text-gray-600 leading-relaxed relative z-10 text-lg">{step.description}</p>
               </motion.div>
             ))}
           </div>
@@ -119,25 +185,29 @@ export default function Home() {
                 Our Services
               </div>
               <h2 className="text-4xl md:text-5xl font-black mb-6 leading-[1.1] tracking-tight text-gray-900">
-                다양한 결제 수단을<br />
-                <span className="text-primary">즉시 현금으로</span> 전환
+                디지털 자산 활용,<br />
+                <span className="text-primary">전문가와 비교</span>하세요
               </h2>
               <p className="text-gray-600 mb-10 text-lg leading-relaxed max-w-xl">
-                티켓거래소는 국내 모든 통신사와 다양한 상품권 매입 서비스를 제공합니다. 
-                투명한 수수료와 업계 최고가 매입을 약속드립니다.
+                티켓거래소는 고객님의 소중한 자산을 가장 가치 있게 활용할 수 있도록 
+                실시간 시세 비교와 정책 분석 서비스를 제공합니다.
               </p>
               
-              <div className="grid gap-4">
+              <div className="grid gap-6">
                 {SERVICES.map((service, idx) => (
-                  <div key={idx} className="group flex gap-5 p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all duration-300">
-                    <div className="w-14 h-14 bg-gray-50 text-gray-400 group-hover:bg-blue-50 group-hover:text-primary rounded-xl flex items-center justify-center shrink-0 transition-colors">
-                      {service.icon === 'Smartphone' ? <Smartphone size={28} /> : service.icon === 'CreditCard' ? <CreditCard size={28} /> : <Ticket size={28} />}
+                  <motion.div 
+                    key={idx} 
+                    whileHover={{ x: 10 }}
+                    className="group flex gap-6 p-8 bg-white rounded-[24px] border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:border-primary/20 transition-all duration-300"
+                  >
+                    <div className="w-16 h-16 bg-gray-50 text-gray-400 group-hover:bg-blue-50 group-hover:text-primary rounded-2xl flex items-center justify-center shrink-0 transition-colors shadow-inner">
+                      {service.icon === 'Smartphone' ? <Smartphone size={32} /> : service.icon === 'CreditCard' ? <CreditCard size={32} /> : <Ticket size={32} />}
                     </div>
                     <div>
-                      <h4 className="font-bold text-xl mb-1 text-gray-900">{service.title}</h4>
-                      <p className="text-gray-500 text-sm leading-relaxed">{service.description}</p>
+                      <h4 className="font-bold text-2xl mb-2 text-gray-900">{service.title}</h4>
+                      <p className="text-gray-500 leading-relaxed">{service.description}</p>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
@@ -167,7 +237,7 @@ export default function Home() {
                         </span>
                         <span className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Live Performance</span>
                       </div>
-                      <p className="text-gray-500 font-medium">평균 입금 완료 시간</p>
+                      <p className="text-gray-500 font-medium">평균 상담 및 비교 완료 시간</p>
                       <div className="flex items-baseline justify-center gap-1">
                         <span className="text-6xl font-black text-gray-900 tracking-tighter">2</span>
                         <span className="text-2xl font-bold text-gray-400 mr-2">분</span>
@@ -251,15 +321,15 @@ export default function Home() {
       <section className="py-24 bg-gray-50" id="contact-info">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden p-12 md:p-20">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">지금 바로 상담하세요</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">전문가에게 직접 물어보세요</h2>
             <p className="text-gray-600 mb-12 text-lg">
-              365일 24시간 전문 상담원이 대기하고 있습니다. <br className="hidden md:block" />
-              전화 또는 카카오톡으로 문의하시면 1분 이내에 답변해 드립니다.
+              어떤 서비스가 나에게 가장 유리할지 고민되시나요? <br className="hidden md:block" />
+              24시간 대기 중인 전문가가 실시간으로 비교 분석해 드립니다.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
               <a
-                href="tel:1600-0000"
+                href="tel:010-5029-1777"
                 className="flex flex-col items-center gap-4 p-8 rounded-2xl bg-blue-50 hover:bg-blue-100 transition-all group"
               >
                 <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
@@ -267,20 +337,20 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-500 mb-1">대표 전화 상담</p>
-                  <p className="text-2xl font-black text-primary">1600-0000</p>
+                  <p className="text-2xl font-black text-primary">010-5029-1777</p>
                 </div>
               </a>
               
               <button
-                className="flex flex-col items-center gap-4 p-8 rounded-2xl bg-green-50 hover:bg-green-100 transition-all group"
-                onClick={() => alert('카카오톡 상담으로 연결됩니다.')}
+                className="flex flex-col items-center gap-4 p-8 rounded-2xl bg-blue-50 hover:bg-blue-100 transition-all group"
+                onClick={() => (window as any).fcWidget?.open()}
               >
-                <div className="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                   <MessageCircle size={32} />
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500 mb-1">카카오톡 1:1 상담</p>
-                  <p className="text-2xl font-black text-green-600">ticket_exchange</p>
+                  <p className="text-sm text-gray-500 mb-1">실시간 채팅 상담</p>
+                  <p className="text-2xl font-black text-primary">지금 바로 상담하기</p>
                 </div>
               </button>
             </div>

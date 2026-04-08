@@ -14,24 +14,21 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl font-bold mb-6"
           >
-            신뢰와 안전의 파트너, 티켓거래소
+            금융 가이드의 새로운 기준, 티켓거래소
           </motion.h1>
           <p className="text-gray-600 text-lg leading-relaxed">
-            티켓거래소는 급격한 자금 융통이 필요한 고객님들께 가장 빠르고 안전한 길을 제시합니다.<br />
-            정식 사업자 등록 업체로서 투명한 절차와 정직한 수수료를 약속드립니다.
+            티켓거래소는 디지털 자산의 효율적인 활용을 고민하는 고객님들께 최적의 비교 분석과 가이드를 제공합니다.<br />
+            정식 사업자 등록 업체로서 투명한 절차와 정직한 상담을 약속드립니다.
           </p>
         </div>
 
         {/* Vision & Mission */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24">
-          <div className="relative rounded-3xl overflow-hidden h-80">
-            <img
-              src={IMAGES.TRUST_BADGE}
-              alt="About Us"
-              className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
-            />
-            <div className="absolute inset-0 bg-primary/20" />
+          <div className="relative rounded-3xl overflow-hidden h-80 bg-blue-50 flex items-center justify-center">
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute top-0 left-0 w-full h-full bg-[repeating-linear-gradient(45deg,transparent,transparent_20px,rgba(59,130,246,0.1)_20px,rgba(59,130,246,0.1)_40px)]" />
+            </div>
+            <ShieldCheck size={120} className="text-primary/20 relative z-10" />
           </div>
           <div className="flex flex-col justify-center">
             <h2 className="text-3xl font-bold mb-6">고객 중심의 가치 실현</h2>
@@ -75,7 +72,7 @@ export default function About() {
             </div>
             <div>
               <div className="text-4xl font-black mb-2">3min</div>
-              <div className="text-blue-100 text-sm">평균 송금 시간</div>
+              <div className="text-blue-100 text-sm">평균 상담 시간</div>
             </div>
           </div>
         </div>
